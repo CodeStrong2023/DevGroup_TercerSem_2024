@@ -1,21 +1,21 @@
-package DevGroup_TercerSem_2024.Java.Leccion01.ar.com.system2023.mundopc;
+package ar.com.system2023.mundopc;
 
 public class mundopc {
     public static void main(String[] args) {
         // definimos var, creamos objetos
 
         Monitor monitorHP = new Monitor("HP ", 13); // importamos la clase
-        Teclado tecladoHP = new Teclado("Bluethoot ", " HP");
-        Raton ratonHP = new Raton("Bluethoot ", "HP");
+        Teclado tecladoHP = new Teclado("Bluethooth ", " HP");
+        Raton ratonHP = new Raton("Bluethooth ", "HP");
         Computadora computadoraHP = new Computadora("ComputadoraHP ", monitorHP, tecladoHP, ratonHP);
 
         Monitor monitorGamer = new Monitor("Gamer ", 32); 
-        Teclado tecladoGamer = new Teclado("Bluethoot ", "Gamer ");
-        Raton ratonGamer = new Raton("Bluethoot ", "Gamer");
+        Teclado tecladoGamer = new Teclado("Bluethooth ", "Gamer ");
+        Raton ratonGamer = new Raton("Bluethooth ", "Gamer");
         Computadora computadoraGamer = new Computadora("ComputadoraGamer ", monitorGamer, tecladoGamer, ratonGamer);
 
         Monitor monitorLogitech = new Monitor("Logitech ", 38); 
-        Teclado tecladoLogitech = new Teclado("Bluethoot ", " Logitech ");
+        Teclado tecladoLogitech = new Teclado("Bluethooth ", " Logitech ");
         Raton ratonLogitech = new Raton("Bluethoot ", " Logitech ");
         Computadora computadoraLogitech = new Computadora("ComputadoraLogitech ", monitorLogitech, tecladoLogitech, ratonLogitech);
         
