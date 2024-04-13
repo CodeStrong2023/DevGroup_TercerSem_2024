@@ -1,4 +1,4 @@
-package Java.Leccion01.ar.com.system2023.mundopc;
+package ar.com.system2023.mundopc;
 
 public class Teclado extends DispositivoEntrada {
     private final int idTeclado;

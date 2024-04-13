@@ -10,7 +10,7 @@ public class Orden {
 
     // Constructor vacío
     public Orden(){
-        this.idOrden = ++idOrden.contadorOrdenes;
+        this.idOrden = ++Orden.contadorOrdenes;
         this.computadora = new Computadora[Orden.MAX_COMPUTADORAS];
     }
 

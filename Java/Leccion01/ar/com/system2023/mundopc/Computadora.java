@@ -36,7 +36,7 @@ public class Computadora {
         this.nombre = nombre;
     }
     
-    public String getMonitor(){
+    public Monitor getMonitor(){
         return this.monitor;
     }
 
@@ -44,7 +44,7 @@ public class Computadora {
         this.monitor = monitor;
     }
 
-    public String getTeclado(){
+    public Teclado getTeclado(){
         return this.teclado;
     }
 
@@ -52,7 +52,7 @@ public class Computadora {
         this.teclado = teclado;
     }
 
-    public String getRaton(){
+    public Raton getRaton(){
         return this.raton;
     }
 
