@@ -5,18 +5,18 @@ public class mundopc {
         // definimos var, creamos objetos
 
         Monitor monitorHP = new Monitor("HP ", 13); // importamos la clase
-        Teclado tecladoHP = new Teclado("Bluethooth ", " HP");
-        Raton ratonHP = new Raton("Bluethooth ", "HP");
+        Teclado tecladoHP = new Teclado("Bluetooth ", " HP");
+        Raton ratonHP = new Raton("Bluetooth ", "HP");
         Computadora computadoraHP = new Computadora("ComputadoraHP ", monitorHP, tecladoHP, ratonHP);
 
         Monitor monitorGamer = new Monitor("Gamer ", 32); 
-        Teclado tecladoGamer = new Teclado("Bluethooth ", "Gamer ");
-        Raton ratonGamer = new Raton("Bluethooth ", "Gamer");
+        Teclado tecladoGamer = new Teclado("Bluetooth ", "Gamer ");
+        Raton ratonGamer = new Raton("Bluetooth ", "Gamer");
         Computadora computadoraGamer = new Computadora("ComputadoraGamer ", monitorGamer, tecladoGamer, ratonGamer);
 
         Monitor monitorLogitech = new Monitor("Logitech ", 38); 
-        Teclado tecladoLogitech = new Teclado("Bluethooth ", " Logitech ");
-        Raton ratonLogitech = new Raton("Bluethoot ", " Logitech ");
+        Teclado tecladoLogitech = new Teclado("Bluetooth ", " Logitech ");
+        Raton ratonLogitech = new Raton("Bluetooth ", " Logitech ");
         Computadora computadoraLogitech = new Computadora("ComputadoraLogitech ", monitorLogitech, tecladoLogitech, ratonLogitech);
         
         Computadora computadoraVar4 = new Computadora("Computadoras de distintas marcas", monitorLogitech, tecladoHP, ratonGamer);
