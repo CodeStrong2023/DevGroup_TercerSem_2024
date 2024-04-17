@@ -1,7 +1,11 @@
 
 package mundopc;
 
-import ar.com.system2024.mundo.pc.*;
+import ar.com.system2023.mundo.pc.Orden;
+import ar.com.system2023.mundo.pc.Monitor;
+import ar.com.system2023.mundo.pc.Teclado;
+import ar.com.system2023.mundo.pc.Computadora;
+import ar.com.system2023.mundo.pc.Raton;
 
 
 public class MundoPC {

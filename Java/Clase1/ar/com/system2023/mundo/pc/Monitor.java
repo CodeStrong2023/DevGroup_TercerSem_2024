@@ -1,5 +1,5 @@
 
-package ar.com.system2024.mundo.pc;
+package ar.com.system2023.mundo.pc;
 
 
 public class Monitor {
