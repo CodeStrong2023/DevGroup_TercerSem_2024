@@ -1,0 +1,26 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>24</x><y>72</y><w>168</w><h>120</h></coordinates><panel_attributes>&lt;&lt;FiguraGeometrica&gt;&gt;
+--
+-alto
+-ancho
+--
++get_alto()
++set_alto(alto)
++get_ancho()
++set_ancho(ancho)
++__str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>88</y><w>168</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Color&gt;&gt;
+--
+-color
+--
++get_color()
++set_color(color)
++__str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>16</x><y>280</y><w>168</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Cuadrado&gt;&gt;
+--
+-area()
++__str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>88</x><y>184</y><w>72</w><h>112</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>20;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>88</x><y>160</y><w>272</w><h>136</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;150;320;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>264</y><w>192</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Rectangulo&gt;&gt;
+--
++area()
++__str__()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>96</x><y>184</y><w>336</w><h>96</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;10;400;100</additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>160</y><w>112</w><h>120</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;10;110;130</additional_attributes></element></diagram>
