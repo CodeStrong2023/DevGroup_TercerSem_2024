@@ -1,15 +1,22 @@
 from Cuadrado import Cuadrado
+from Rectangulo import Rectangulo
 
-cuadrado1 = Cuadrado(5, 'Azul')
-print(cuadrado1.ancho)
-print(cuadrado1.alto)
-print(f'Calculo del area del cuadrado: {cuadrado1.calcular_area()}')
+print('Creacion de objeto clase Cuadrado'.center(50, '_'))
+Cuadrado1 = Cuadrado(8, "azul")
+Cuadrado1.alto = 7
+Cuadrado1.ancho = 7
+# prinr(cuadrado1.ancho)
+# prinr(cuadrado1.alto)
+print(Cuadrado1.ancho)
+print(Cuadrado1.alto)
+print(f'calculo del area del cuadrado: {Cuadrado1.calcular_area()}')
 
-# MRO = METHOD RESOLUTION ORDER (muestra el orden en que se ejecutan los metodos)
-print(Cuadrado.mro())
-print(cuadrado1)
+#MRO = Method Resolution Orden
+#print(Cuadrado.mro())
 
-rectangulo1 = Rectangulo(3, 8, 'verde')
-print(f'Calculo del area rectangulo: {rectangulo1.calcular_area()}')
+print(Cuadrado1)
+print('Creacion de objeto clase Restagulo'.center(50, '_'))
+rectangulo1 = Rectangulo(3, 9, 'verde')
+rectangulo1.ancho = 8
+print(f'Calculo del area del rectangulo: {rectangulo1.calcular_area()}')
 print(rectangulo1)
-
