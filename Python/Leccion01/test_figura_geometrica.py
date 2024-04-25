@@ -1,4 +1,5 @@
 from Cuadrado import Cuadrado
+from Rectangulo import Rectangulo
 
 cuadrado1 = Cuadrado(5, 'Azul')
 print(cuadrado1.ancho)
