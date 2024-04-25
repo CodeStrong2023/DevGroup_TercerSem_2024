@@ -1,41 +1,42 @@
-class FiguraGeometrica:
+from abc import ABC, abstractmethod
+# ABS SIGNIFICA: Abstract Base Class, convierte una clase en abstracta
+class FiguraGeometrica(ABC):
     def __init__(self, ancho, alto):
         if self._validar_valores(ancho):
-         self.ancho = ancho
+            self._ancho = ancho
         else:
-         self._ancho = 0 
-         print(f'valor erroneo para el ancho: {ancho}')       
-        if self._Validar_Valores(alto):
-         self._alto = alto
+            self.ancho = 0
+            print(f"Valor erroneo para el ancho: {ancho}")
+        if 0 < alto < 10:
+            self._alto = alto
         else:
-         self._alto = 0
-         print(f'Valor erroeno para el alto: {alto}')
-        
-@property
-def ancho(self):
-    return self._ancho  
+            self.alto = 0
+            print(f"Valor erroneo para el alto: {alto} ")
+    @property
+    def ancho(self):
+        return self._ancho
+    @ancho.setter
+    def ancho(self, ancho):
+        if self._validar_valores(ancho):
+            self.ancho = ancho
+        else:
+            print(f"Valor erroneo ancho: {ancho}")
+    @property
+    def alto(self,alto):
+        return self._alto
+    @alto.setter
+    def alto(self, alto):
+        if self._validar_valores(alto):
+            self._alto = alto
+        else:
+            print(f"Valor erroneo alto: {alto} ")
 
-@ancho.setter
-def ancho(self, ancho):
-    if self._validar_valores(ancho):
-        self._ancho = ancho
-    else:
-        print(f'valor erroneo ancho: {ancho}')
-        
-@property
-def alto(self):
-    return self._alto
+    @abstractmethod
+    def calcular_area(self):
+        pass
 
-@alto.setterdef 
-def alto(self, alto):
-    if self._validar_valores(alto):
-        self._alto = alto
-    else:
-        print(f'valor erroneo alto: {alto}')
-    
-def __str__(self):
-    return f'FiguraGeometrica [Ancho: {self.ancho}, Alto: {self._alto}]'
+    def __str__(self):
+        return f'Figura Geometrica [Ancho: {self._ancho}, Alto: {self._alto}]'
 
-def _validar_valores(self, valor):
-    return True if 0 < 10 else False # Metodo encapsulado
-    
+    def _validar_valores(self,valor): #Metodo encapsulado
+        return True if 0 < valor < 10 else False
