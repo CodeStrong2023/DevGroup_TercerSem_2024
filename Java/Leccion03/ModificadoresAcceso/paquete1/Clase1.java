@@ -10,4 +10,7 @@ public class Clase1{
     public void metodoPublico(){
         System.out.println("Método public");
     }
+    protected void metodoProtected(){
+        System.out.println("Método protected");
+    }
 }
