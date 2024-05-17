@@ -52,8 +52,3 @@ console.log("Distitas formas de imprimir un objeto: FORMA 3")
 //Numero 3: La función Object.values()
 let personaArray = Object.values(persona);
 console.log(personaArray);
-
-//Número 4: Utilizaremos el metodo json.stringify
-console.log("distintas formas de imprimir un objeto: forma 4");
-let personaString = JSON.stringify(persona);
-console.log(personaString);
