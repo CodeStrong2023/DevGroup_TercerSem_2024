@@ -1,15 +1,15 @@
-<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>105</x><y>336</y><w>182</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Chatbot&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>84</x><y>308</y><w>182</w><h>63</h></coordinates><panel_attributes>&lt;&lt;Chatbot&gt;&gt;
 --
 -import de Gemini
 -creacion de historial de conversación
 --
 # crear o no una clase a importar para la IA
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>224</y><w>70</w><h>21</h></coordinates><panel_attributes>AHORCADO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>259</y><w>21</w><h>91</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>182</x><y>252</y><w>182</w><h>28</h></coordinates><panel_attributes>lt=-
-</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>238</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=-
-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>259</y><w>21</w><h>168</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>259</x><y>413</y><w>182</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Database&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>294</x><y>196</y><w>70</w><h>21</h></coordinates><panel_attributes>AHORCADO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>231</y><w>21</w><h>91</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>224</y><w>182</w><h>28</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>210</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>231</y><w>21</w><h>168</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>238</x><y>385</y><w>182</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Database&gt;&gt;
 --
 -creacion de una clase para enlazar bases de datos al proyectos
 --
@@ -18,18 +18,18 @@
 + Los nombres estarán divididos
  en colleciones. Ej: Mamiferos.
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>476</x><y>329</y><w>182</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Ahorcado&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>301</y><w>182</w><h>84</h></coordinates><panel_attributes>&lt;&lt;Ahorcado&gt;&gt;
 --
 -Codigo Duro
 --
 # creacion de la logica del juego.
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>252</y><w>238</w><h>28</h></coordinates><panel_attributes>lt=-
-</panel_attributes><additional_attributes>320;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>259</y><w>21</w><h>84</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLActor</id><coordinates><x>336</x><y>532</y><w>42</w><h>77</h></coordinates><panel_attributes>Gabi</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>490</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLActor</id><coordinates><x>364</x><y>28</y><w>42</w><h>77</h></coordinates><panel_attributes>Marcos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>140</y><w>21</w><h>98</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>126</y><w>70</w><h>21</h></coordinates><panel_attributes>FrontEnd</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>98</y><w>42</w><h>42</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;40;40;10</additional_attributes></element><element><id>UMLActor</id><coordinates><x>553</x><y>441</y><w>42</w><h>77</h></coordinates><panel_attributes>Ale</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>406</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLActor</id><coordinates><x>287</x><y>532</y><w>42</w><h>77</h></coordinates><panel_attributes>Angelo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>301</x><y>490</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLActor</id><coordinates><x>126</x><y>434</y><w>42</w><h>77</h></coordinates><panel_attributes>Enzo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>392</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>224</y><w>238</w><h>28</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>320;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>539</x><y>231</y><w>21</w><h>84</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLActor</id><coordinates><x>315</x><y>504</y><w>42</w><h>77</h></coordinates><panel_attributes>Gabi</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>329</x><y>462</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLActor</id><coordinates><x>343</x><y>0</y><w>42</w><h>77</h></coordinates><panel_attributes>Marcos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>112</y><w>21</w><h>98</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>294</x><y>98</y><w>70</w><h>21</h></coordinates><panel_attributes>FrontEnd</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>322</x><y>70</y><w>42</w><h>42</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;40;40;10</additional_attributes></element><element><id>UMLActor</id><coordinates><x>532</x><y>413</y><w>42</w><h>77</h></coordinates><panel_attributes>Ale</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>546</x><y>378</y><w>21</w><h>42</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLActor</id><coordinates><x>266</x><y>504</y><w>42</w><h>77</h></coordinates><panel_attributes>Angelo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>462</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
+</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLActor</id><coordinates><x>105</x><y>406</y><w>42</w><h>77</h></coordinates><panel_attributes>Enzo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>119</x><y>364</y><w>21</w><h>49</h></coordinates><panel_attributes>lt=-&gt;
 </panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element></diagram>
