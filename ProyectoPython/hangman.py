@@ -91,18 +91,18 @@ boton_iniciar = tk.Button(ventana, text="Iniciar", command=iniciar_juego, font=(
 boton_iniciar.place(relx=0.51, rely=0.93, anchor=tk.CENTER)
 
 # Crear el label para mostrar el progreso del juego
-progreso_label = tk.Label(ventana, text= palabra, font=("Arial", 16))
+progreso_label = tk.Label(ventana, text= palabra, font=("Arial", 16), bg="#022140", fg="#f6f6f6")
 
 
 boton_enviar = tk.Button(ventana, text="Enviar", padx=10, pady=5, command=entrada) 
 entradaAlimentacion = tk.Text(ventana, width= 40, height=3) # Configuramos el tamaño de la ventana de alimentación
 
 # Configurar el botón para mostrar el historial
-boton_mostrar_pista = tk.Button(ventana, text="Pedir pista", command=mostrar_pista)
+boton_mostrar_pista = tk.Button(ventana, text="Pedir pista", command=mostrar_pista, bg="#022140", fg="#f6f6f6")
 # Configurar el botón para ocultar el historial
-boton_ocultar_pista = tk.Button(ventana, text="Ocultar pista", command=ocultar_pista)
+boton_ocultar_pista = tk.Button(ventana, text="Ocultar pista", command=ocultar_pista, bg="#022140", fg="#f6f6f6")
 
-respuesta_texto = tk.Text(ventana, width=20, height=20)
+respuesta_texto = tk.Text(ventana, width=40, height=10, bg="#022140", fg="#f6f6f6", bd=0)
 ventana.mainloop()
 
 
