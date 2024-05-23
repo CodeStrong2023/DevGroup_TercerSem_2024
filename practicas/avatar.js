@@ -1,1 +1,0 @@
-let botonPersonajeJugador = document.getElementById('')
