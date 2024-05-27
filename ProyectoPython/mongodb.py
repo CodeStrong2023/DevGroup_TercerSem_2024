@@ -7,10 +7,13 @@ try:
 
     # Crea o busca la base de datos "pruebaProyecto" 
     db = cliente["Animales"] 
+    dbUsers = cliente["Usuarios"]
 
     # Lista todas las colecciones en la base de datos
     colecciones = db.list_collection_names()
     
+    listaUsuarios = dbUsers["listaUsuarios"]
+       
 
     
     # Crear una variable donde se va a almacenar una colleccion aleatoria.
