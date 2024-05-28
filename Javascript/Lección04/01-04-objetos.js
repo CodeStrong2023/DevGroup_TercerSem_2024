@@ -76,14 +76,20 @@ console.log("Comenzamos con el método get y set para idiomas");
 persona.lang = "es";
 console.log(persona.lang);
 
-function Persona3(nombre, apellido, email){ // Constructor
+function Persona3(nombre, apellido, email){ //constructor
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre + ' '+this.apellido;
+    }
 }
-let padre = new Persona3("Leo", "Lopez", "lopezl@gmail.com");
-padre.nombre = "Luis";
+let padre = new Persona3('Leo','Lopez','leolopez34@gmail.com');
+padre.nombre = "Luis"; //modificamos el nombre
+padre.telefono = '56348385'; //una propiedad exclusiva del objeto padre
 console.log(padre);
-
-let madre = new Persona3("Laura", "Contrera", "contreral@gmail.com");
-console.log(madre);
+console.log(padre.nombreCompleto())//Utilizamos la  función
+let madre = new Persona3("Laura","Contreras","contreral@gmail.com");
+console.log(madre)
+console.log(madre.telefono); //la propiedad no esta definida
+console.log(madre.nombreCompleto());
