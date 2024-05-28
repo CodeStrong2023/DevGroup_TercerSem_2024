@@ -122,19 +122,5 @@ ventana.mainloop()
 # agregar un menú, elegir usuario, mostrar el ranking, creditos, reiniciar y seleccionar dificultad.
 # modificar la función "entrada" para que acepte la palabra completa
 # hacer un login de usuario con una base de datos que contenga nombre de usuario y puntuación.
-def login_usuario():
-    def verificar_login():
-        usuario = entrada_usuario.get()
-        if usuario:
-            user = usuarios_collection.find_one({"nombre": usuario})
-            if user:
-                nombre_usuario.set(usuario)
-            else:
-                usuarios_collection.insert_one({"nombre": usuario, "puntuacion": 0})
-                nombre_usuario.set(usuario)
-            login_ventana.destroy()
-        else:
-            error_label.config(text="Por favor ingrese un nombre de usuario")
-
 # hacer una clasificacion de los jugadores con mas puntaje.
 # mostrar un teclado en pantalla.
