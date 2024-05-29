@@ -4,7 +4,7 @@ import googleapi as chatbot
 import tkinter as tk
 import google.generativeai as genai
 
-response = chatbot.model.generate_content(f'Generame una pista breve y no tan obvia sobre que animal es sin decirme su nombre {mongodb.respuesta}')
+response = chatbot.model.generate_content(f'Generame una pista breve y no tan obvia sobre que animal es sin decirme su nombre {pruebaMongo.respuesta}')
 historial = []
 historial.append(response.text)
 palabra_random = mongodb.respuesta.upper()
