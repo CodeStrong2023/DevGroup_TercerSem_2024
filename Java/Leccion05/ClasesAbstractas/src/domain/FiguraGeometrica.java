@@ -8,18 +8,23 @@ public abstract class FiguraGeometrica {
         this.tipoFigura = tipoFigura;
     }
     
+    
     //Metodo abstracto
     public abstract void dibujar();
-        
+       
+    
     //Agregamos el get y set
+    
     
     public String getTipoFigura(){
         return tipoFigura;
     }
+    
     public void setTipoFigura(){
         this.tipoFigura = tipoFigura;
     }
 
+    
     @Override
     public String toString() {
         return "FiguraGeometrica{" + "tipoFigura=" + tipoFigura + '}';
