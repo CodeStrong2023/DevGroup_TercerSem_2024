@@ -3,7 +3,7 @@ import random
 
 try:
     # Conectarse a MongoDB (reemplaza con tus detalles de conexión)
-    cliente = pymongo.MongoClient("mongodb+srv://DevGroup:ElMejorDeLaTecnicatura@clusterxxb.fwd8kw8.mongodb.net/")
+    cliente = pymongo.MongoClient("mongodb+srv://DevGroup:ElMejorDeLaTecnicatura@clusterxxb.fwd8kw8.mongodb.net/", tls=True)
 
     # Crea o busca la base de datos "pruebaProyecto" 
     db = cliente["Animales"] 
