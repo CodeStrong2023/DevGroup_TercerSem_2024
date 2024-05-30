@@ -27,7 +27,7 @@ def registro():
 
 def crear_usuario():
     usuario = entradaLogin.get("1.0","end-1c").strip()
-    password = entradaPassword.get("1.0", "end-1c").strip()
+    password = entradaPassword.get().strip()
     comprobar = tk.Label(ventana, text="", font=("Arial", 9, "bold"), bg="#1e396b", fg="#f6f6f6")
     try:
         nuevo_usuario = mongodb.listaUsuarios.insert_one({"Nombre" : usuario,"Contraseña" : password})

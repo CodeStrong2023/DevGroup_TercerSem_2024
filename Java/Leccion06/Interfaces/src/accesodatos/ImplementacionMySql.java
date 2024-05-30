@@ -1,7 +1,6 @@
+package accesodatos;
 
-package acessodatos;
-
-public class ImplemetancionMySql implements IAccesoDatos{
+public class ImplementacionMySql implements IAccesoDatos{
 
     @Override
     public void insertar() {
