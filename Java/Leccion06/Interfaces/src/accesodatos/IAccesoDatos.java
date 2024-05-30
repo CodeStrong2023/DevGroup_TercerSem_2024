@@ -1,5 +1,4 @@
-
-package acessodatos;
+package accesodatos;
 
 public interface IAccesoDatos {
     int MAX_REGISTRO = 10;
