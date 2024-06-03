@@ -1,3 +1,4 @@
+//let persona3 = new Persona('Carla', 'Ponce');
 
 class Persona{ //Clase padre
 
@@ -25,6 +26,20 @@ class Persona{ //Clase padre
     
 }
 
+class Empleado extends Persona{ //Clase hija
+    constructor(nombre, apellido, departamento){
+        super(nombre,apellido);
+        this._departamento = departamento;
+    }
+
+    get departamento(){
+        return this._departamento
+    }
+    set departamento(departamento){
+        this._departamento = departamento;
+    }
+}
+
 let persona1 = new Persona('Martin', 'Perez')
 console.log(persona1._nombre);
 persona1.nombre = 'Juan Carlos';
@@ -40,3 +55,7 @@ console.log(persona2._nombre);
 persona2.apellido = 'Benitez'
 console.log(persona2._apellido);
 //console.log(persona2)
+
+let empleado1 = new Empleado('Maria', 'Gimenez', 'Sistemas');
+console.log(empleado1);
+console.log(empleado1.nombre);

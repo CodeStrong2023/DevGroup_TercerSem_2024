@@ -1,4 +1,9 @@
 /Java/Leccion02/Enumeraciones/build/
+<<<<<<< HEAD
+/Java/Leccion04/InstanceOf/nbproject/private/.DS_Store
+Python/ .DS_Store
+.DS_Store
+=======
 /Java/Leccion04/InstanceOf/nbproject/private/
 /Java/Leccion05/ConvercionObjetos/nbproject/private/
 /Java/Leccion05/ConvercionObjetos_1/nbproject/private/
@@ -10,3 +15,4 @@
 /Java/Leccion05/ClasesAbstractas/nbproject/private/
 /Java/Leccion05/ConversionObjetos/build/
 /Java/Leccion05/ConversionObjetos/nbproject/private/
+>>>>>>> ff4b64e2463354a982407a41c7b1712070d2fc68
