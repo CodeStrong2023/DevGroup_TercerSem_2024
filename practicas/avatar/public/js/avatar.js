@@ -15,3 +15,20 @@ document
       alert("No se ha seleccionado ningún personaje.");
     }
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const personajes = ["Zuko", "Katara", "Aang", "Toph"];
+
+  function seleccionarPersonajeComputadora() {
+    const indiceAleatorio = Math.floor(Math.random() * personajes.length);
+    const personajeComputadora = personajes[indiceAleatorio];
+
+    return personajeComputadora;
+  }
+
+  let personajeComputadora = seleccionarPersonajeComputadora();
+
+  const personajeElemento = document.getElementById("personaje-computadora");
+  personajeElemento.textContent =
+    "Personaje seleccionado por la computadora: " + personajeComputadora;
+});
