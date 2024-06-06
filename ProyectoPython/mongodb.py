@@ -24,9 +24,8 @@ try:
         
     coleccion_aleatoria = db[coleccion]
         
-    ahorcado = coleccion_aleatoria.aggregate([{ "$sample": { "size": 1 } }]).next()
-    respuesta = ahorcado["Nombre"]
-        
+    animalDoc = coleccion_aleatoria.aggregate([{ "$sample": { "size": 1 } }]).next()
+    animal = animalDoc["Nombre"] 
     # Busca animales en la base de datos
 
 
