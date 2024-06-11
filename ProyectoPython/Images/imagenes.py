@@ -79,4 +79,43 @@ def cargar_imagenes(root):
     usuarioExistente = Image.open("Images/usuarioExistente.png")
     img["usuarioExistenteIMG"] = ImageTk.PhotoImage(usuarioExistente)
 
+    nro1 = Image.open("Images/nro1.png")
+    img["nro1"] = ImageTk.PhotoImage(nro1, master=root)
+
+    nro2 = Image.open("Images/nro2.png")
+    img["nro2"] = ImageTk.PhotoImage(nro2, master=root)
+
+    nro3 = Image.open("Images/nro3.png")
+    img["nro3"] = ImageTk.PhotoImage(nro3, master=root)
+
+    nro4 = Image.open("Images/nro4.png")
+    img["nro4"] = ImageTk.PhotoImage(nro4, master=root)
+
+    nro5 = Image.open("Images/nro5.png")
+    img["nro5"] = ImageTk.PhotoImage(nro5, master=root)
+
+    nro6 = Image.open("Images/nro6.png")
+    img["nro6"] = ImageTk.PhotoImage(nro6, master=root)
+
+    nro7 = Image.open("Images/nro7.png")
+    img["nro7"] = ImageTk.PhotoImage(nro7, master=root)
+
+    nro8 = Image.open("Images/nro8.png")
+    img["nro8"] = ImageTk.PhotoImage(nro8, master=root)
+
+    nro9 = Image.open("Images/nro9.png")
+    img["nro9"] = ImageTk.PhotoImage(nro9, master=root)
+
+    nro10 = Image.open("Images/nro10.png")
+    img["nro10"] = ImageTk.PhotoImage(nro10, master=root)
+
+    nombre = Image.open("Images/nombre.png")
+    img["nombre"] = ImageTk.PhotoImage(nombre, master=root)
+
+    puntaje = Image.open("Images/puntaje.png")
+    img["puntaje"] = ImageTk.PhotoImage(puntaje, master=root)
+
+    palabras_adivinadas = Image.open("Images/palabras_adivinadas.png")
+    img["palabras_adivinadas"] = ImageTk.PhotoImage(palabras_adivinadas, master=root)
+
     return img
