@@ -376,18 +376,18 @@ def clasificacion():
 
     for i in range(1,11):
         if i - 11:
-            etiqueta1 = tk.Label(ventana, image=img[f"nro{i}"], background="#1e396b")
+            etiqueta1 = tk.Label(ventana, image=img[f"nro{i}"], background="#1e396b", bd=0)
             etiqueta1.grid(row=i,column=0)
     for i in range(1,11):
-        nombre1 = tk.Label(ventana, text=top_users_names[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff")
-        nombre1.grid(row=i,column=1)
-        nombre2 = tk.Label(ventana, text=top_users_points[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff")
-        nombre2.grid(row=i,column=3)
-        nombre3 = tk.Label(ventana, text=top_users_words[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff")
-        nombre3.grid(row=i,column=2)
-    etiquetaNombre = tk.Label(ventana, background="#1e396b", image=img["nombre"])
-    etiquetaPalabrasAcertadas = tk.Label(ventana, background="#1e396b", image=img["palabras_adivinadas"])
-    etiquetaPuntaje = tk.Label(ventana,background="#1e396b", image=img["puntaje"])
+        nombre1 = tk.Label(ventana, text=top_users_names[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff", bd=0, highlightbackground="#000323", highlightthickness=0.5)
+        nombre1.grid(row=i,column=1, sticky="nsew")
+        nombre2 = tk.Label(ventana, text=top_users_points[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff", bd=0, highlightbackground="#000323", highlightthickness=0.5)
+        nombre2.grid(row=i,column=3, sticky="nsew")
+        nombre3 = tk.Label(ventana, text=top_users_words[i-1], font=("Arial", 16, "bold"), background="#1e396b", foreground="#ffffff", bd=0, highlightbackground="#000323", highlightthickness=0.5)
+        nombre3.grid(row=i,column=2, sticky="nsew")
+    etiquetaNombre = tk.Label(ventana, background="#1e396b", image=img["nombre"], bd = 0)
+    etiquetaPalabrasAcertadas = tk.Label(ventana, background="#1e396b", image=img["palabras_adivinadas"], bd=0)
+    etiquetaPuntaje = tk.Label(ventana,background="#1e396b", image=img["puntaje"], bd=0)
     etiquetaNombre.grid(row=0, column=1)
     etiquetaPalabrasAcertadas.grid(row=0, column=2)
     etiquetaPuntaje.grid(row=0, column=3)
