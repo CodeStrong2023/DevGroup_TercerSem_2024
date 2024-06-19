@@ -1,11 +1,14 @@
 //let persona3 = new Persona('Carla', 'Ponce');
 
-class Persona {
-  //Clase padre
+class Persona { //Clase padre
+
+  static contadorObjetosPersona = 0; 
 
   constructor(nombre, apellido) {
     this._nombre = nombre;
     this._apellido = apellido;
+    Persona.contadorObjetosPersona++;
+    console.log('Se incremeta el contar: '+Persona.contadorObjetosPersona)
   }
 
   get nombre() {
@@ -34,6 +37,14 @@ class Persona {
     // El método que se ejecuta depende si es una referencia de tipo padre o hija
     return this.nombreCompleto();
   }
+
+  static saludar(){
+    console.log('Saludos desde este metodo static');
+  }
+  static saludar2(persona){
+    console.log(persona.nombre+' '+ persona.apellido);
+  }
+
 }
 
 class Empleado extends Persona {
@@ -79,3 +90,14 @@ console.log(empleado1.nombreCompleto());
 // Object.prototype.toString Esta es la manera de acceder a atributos y métodos de manera dinámica
 console.log(empleado1.toString());
 console.log(persona1.toString());
+
+//persona1.saludar(); no se utiliza desde el objeto
+Persona.saludar();
+Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+//console.log(persona1.contadorObjetosPersona);
+console.log(Persona.contadorObjetosPersona);
+console.log(Empleado.contadorObjetosPersona);
