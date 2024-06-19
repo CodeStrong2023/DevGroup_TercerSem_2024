@@ -3,59 +3,87 @@
   <head>
     <meta charset="utf-8" />
     <title>LA LEYENDA DE AANG: AVATAR</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <script src="./js/avatar.js"></script>
   </head>
   <body>
-    <h1>AVATAR 🔥💧🌱🌪️</h1>
-    <!--Esto es estatico, NO cambia, el h1 se utiliza una vez-->
+    <div class="grid-container">
+      <div class="grid-item grid-1">
+        <h1>AVATAR 🔥💧🌱🌪️</h1>
+        <!--Esto es estatico, NO cambia, el h1 se utiliza una vez-->
 
-    <section id="seleccionar-personaje">
-      <h2>Elige tu Personaje</h2>
+        <section id="seleccionar-personaje">
+          <h2>Elige tu Personaje</h2>
 
-      <label for="zuko">Zuko</label>
-      <input type="radio" name="personaje" id="zuko" value="Zuko" />
+          <label for="zuko">Zuko</label>
+          <!--Esta etiqueta es para darle un indicador a los usuarios de que están seleccionando-->
+          <input type="radio" name="personaje" id="zuko" />
+          <!-- name es para agrupar todos los imputs y poder seleccionar-->
 
-      <label for="katara">Katara</label>
-      <input type="radio" name="personaje" id="katara" value="Katara" />
+          <label for="katara">Katara</label>
+          <!--El atributo for ayuda a vincular un label con un imput a través del mismo id-->
+          <input type="radio" name="personaje" id="katara" />
+          <!--Acá van los personajes-->
 
-      <label for="aang">Aang</label>
-      <input type="radio" name="personaje" id="aang" value="Aang" />
+          <label for="aang">Aang</label>
+          <input type="radio" name="personaje" id="aang" />
+          <!--Le damos un atributo id para saber cual es el valor de cada uno-->
 
-      <label for="toph">Toph</label>
-      <input type="radio" name="personaje" id="toph" value="Toph" />
+          <label for="toph">Toph</label>
+          <input type="radio" name="personaje" id="toph" />
 
-      <button id="boton-personaje">Seleccionar</button>
-      <!-- El botón para seleccionar el personaje-->
-    </section>
+          <button id="boton-personaje">Seleccionar</button>
+          <!-- El botón para seleccionar el personaje-->
+        </section>
 
-    <section id="seleccionar-ataque">
-      <h2>Elige tu ataque</h2>
-      <!--Se puede utilizar varias veces-->
-      <p>Tu personaje tiene <span>3</span> vidas</p>
+        <section id="seleccionar-ataque">
+          <h2>Elige tu ataque</h2>
+          <!--Se puede utilizar varias veces-->
+          <p>
+            Tu personaje <span id="personaje-jugador"></span> tiene
+            <span>3</span> vidas
+          </p>
+          <!--Pero esto debe ser dinamico, necesitamos que cambie-->
+          <p>
+            El personaje <span id="personaje-enemigo"></span> del enemigo tienen
+            <span>3</span> vidas
+          </p>
+          <!--Con la etiqueta spam vamos a modificar el 3 con JS-->
+          <p>
+            <button id="boton-punio">Punio ✊</button>
+            <button id="boton-patada">Patada 🦶</button>
+            <button id="boton-barrida">Barrida 👣</button>
+          </p>
+        </section>
 
-      <p id="personaje-computadora"></p>
+        <section id="mensajes">
+          <!--Será un párrafo dinamico-->
+        </section>
 
-      <!--Pero esto debe ser dinamico, necesitamos que cambie-->
-      <p>Los personajes del enemigo tienen <span>3</span> vidas</p>
-      <!--Con la etiqueta spam vamos a modificar el 3 con JS-->
-      <p>
-        <button id="boton-fuego">Fuego 🔥</button>
-        <button id="boton-agua">Agua 💧</button>
-        <button id="boton-tierra">Tierra 🌱</button>
-        <button id="boton-aire">Aire 🌪️</button>
-      </p>
-    </section>
+        <section id="reiniciar">
+          <button id="boton-reiniciar">Reiniciar</button>
+        </section>
 
-    <section id="mensajes">
-      <!--Será un párrafo dinamico-->
-      <p>
-        Tu personaje atacó con todo el poder del FUEGO, el personaje del enemigo
-        atacó con el medio poder de la TIERRA - GANASTE 🎉
-      </p>
-    </section>
-
-    <section id="reiniciar">
-      <button id="boton-reiniciar">Reiniciar</button>
-    </section>
-    <script src="./js/avatar.js"></script>
+        <img class="imagen" src="/public/assets/Aang.webp" alt="Aang" />
+      </div>
+      <div class="grid-item grid-2">
+        <div class="reglas">
+          <h1>Reglas del juego</h1>
+          <ul>
+            <li>Selecciona un personaje</li>
+            <li>Cada personaje tiene 3 vidas</li>
+            <li>Selecciona un ataque</li>
+            <li>Espera el resultado</li>
+            <li>El personaje que gane 3 veces gana la partida</li>
+          </ul>
+          <h1>Reglas de combate</h1>
+          <ul>
+            <li>Puño gana a Barrida</li>
+            <li>Patada gana Puño</li>
+            <li>Barrida gana a Patada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
