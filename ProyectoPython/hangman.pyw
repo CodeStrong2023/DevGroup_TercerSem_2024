@@ -1,4 +1,5 @@
 import random
+from time import sleep
 import unicodedata
 import mongodb
 import googleapi as chatbot
@@ -117,12 +118,7 @@ def comprobar_usuarios():
         ventana.after(2000, iniciar_juego)
     else:
         label_bienvenida.config(text="USUARIO O CONTRASEÑA INCORRECTOS", font=("Arial", 14, "bold"))
-        entradaLogin.place_forget()
-        label_password.place_forget()
-        entradaPassword.place_forget()
-        label_login.place_forget()
-        boton_iniciarsesion.place_forget()
-        label_bienvenida.place(relx=0.8,rely=0.4, anchor=tk.CENTER)
+        label_bienvenida.place(relx=0.8,rely=0.3, anchor=tk.CENTER)
 
     
 # Funcion para normalizar las cadenas de texto (Eliminar tildes)
@@ -276,14 +272,19 @@ def nueva_pista():
     puntaje -= 20
     
     pista +=1
-    if pista == 2:
-        respuesta_texto.delete(1.0, tk.END) # Limpiamos el cuadro de pista
-        boton_nueva_pista.place_forget()
-        response = chatbot.model.generate_content(f'Dame una nueva pista igual de simple de: {palabra_random}')
-        historial.append({"Role" : "IA", "Mensaje" : response.text})
-        pista_texto = historial[1]
-        respuesta_texto.insert(tk.END, f'{pista_texto["Mensaje"]}\n')
-        respuesta_texto.config(state=tk.DISABLED)
+    while True:
+        try:
+            if pista == 2:
+                respuesta_texto.delete(1.0, tk.END) # Limpiamos el cuadro de pista
+                response = chatbot.model.generate_content(f'Dame una nueva pista igual de simple de: {palabra_random}')
+                historial.append({"Role" : "IA", "Mensaje" : response.text})
+                pista_texto = historial[1]
+                boton_nueva_pista.place_forget()
+                respuesta_texto.insert(tk.END, f'{pista_texto["Mensaje"]}\n')
+                respuesta_texto.config(state=tk.DISABLED)
+            break
+        except:
+            sleep(0.1)
         
 # Función para reinciar el juego
 
@@ -317,9 +318,14 @@ def reiniciar_juego():
     for i in range(len(palabra_random)):
                 if palabra_random_lista[i] == " ":
                     palabra[i] = " "
-    progreso_label.config(text= " ".join(palabra))                
-    response = chatbot.model.generate_content(f'Generame una pista breve y no tan obvia sobre que animal es sin decirme su nombre {nuevo_animal}')
-    historial.append({"Role" : "IA", "Mensaje" : response.text})
+    progreso_label.config(text= " ".join(palabra))
+    while True:
+        try:                
+            response = chatbot.model.generate_content(f'Generame una pista breve y no tan obvia sobre que animal es sin decirme su nombre {nuevo_animal}')
+            historial.append({"Role" : "IA", "Mensaje" : response.text})
+            break
+        except:
+            sleep(0.1)
     entradaAlimentacion.delete(1.0, tk.END)
     # Elimina los elementos
     progreso_label.place_forget()
@@ -343,6 +349,7 @@ def reiniciar_juego():
     
 
 def clasificacion():
+    portadaLabel.place(anchor=tk.CENTER)
     for widget in ventana.winfo_children(): # Ocultar todos los widgets de la ventana
         widget.place_forget()
         widget.grid_forget()
@@ -420,11 +427,11 @@ def actualizar_password(window, nuevapass):
     nueva_contrasena = nuevapass.get().strip()
     contrasena_actualizada = tk.Label(window, font=("Verdana", 12), bg="#1e396b", fg="#f6f6f6")
     if nueva_contrasena:
-        contrasena_actualizada.config(image=img["contrasenaActualizada"])
+        contrasena_actualizada.config(image=img["contrasenaActualizadaIMG"])
         contrasena_actualizada.place(relx = 0.5, rely = 0.2, anchor = tk.CENTER)
         mongodb.listaUsuarios.update_one({"_id" : usuarioDoc["_id"]},  { "$set": {"Contraseña" : nueva_contrasena}})
     else:
-        contrasena_actualizada.config(image=img["contrasenaVacia"])
+        contrasena_actualizada.config(image=img["contrasenaVaciaIMG"])
         contrasena_actualizada.place(relx = 0.5, rely = 0.2, anchor = tk.CENTER)
        
 def cambiar_password():
