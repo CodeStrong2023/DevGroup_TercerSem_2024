@@ -29,3 +29,8 @@ Este es un equipo de trabajo de la Tecnicatura universitaria en programación de
 | Semana 6 | Alejandro Perez   |
 | Semana 7 | Angelo Vellar     |
 | Semana 8 | Joaquín Espósito  |
+| Semana 9 | Enzo Balderrama   |
+| Semana 10| Marcos Martos     |
+| Semana 11| Santiago Peñafiel |
+| Semana 12| Bruno Olivera     |
+| Semana 13| Gabriel Gonzalez  |
