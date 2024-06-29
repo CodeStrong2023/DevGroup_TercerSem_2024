@@ -32,5 +32,5 @@ Este es un equipo de trabajo de la Tecnicatura universitaria en programación de
 | Semana 9 | Enzo Balderrama   |
 | Semana 10| Marcos Martos     |
 | Semana 11| Santiago Peñafiel |
-| Semana 12| Bruno Olivera     |
+| Semana 12| Joaquin Esposito  |
 | Semana 13| Gabriel Gonzalez  |
