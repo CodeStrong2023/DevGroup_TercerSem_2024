@@ -1,9 +1,16 @@
 let ataqueJugador;
 let ataqueEnemigo;
+let vidasJugador = 3;
+let vidasEnemigo = 3;
 
 function iniciarJuego() {
+  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
+  sectionSeleccionarAtaque.style.display = "none";
+
   let botonPersonajeJugador = document.getElementById("boton-personaje");
   botonPersonajeJugador.addEventListener("click", seleccionarPersonajeJugador);
+  let sectionReiniciar = document.getElementById("reiniciar");
+  sectionReiniciar.style.display = "none";
 
   let botonPunio = document.getElementById("boton-punio"); //Ahora creamos un escuchador de eventos
   botonPunio.addEventListener("click", ataquePunio);
@@ -11,6 +18,10 @@ function iniciarJuego() {
   botonPatada.addEventListener("click", ataquePatada);
   let botonBarrida = document.getElementById("boton-barrida");
   botonBarrida.addEventListener("click", ataqueBarrida);
+
+  // Creamos una nueva variable
+  let botonReiniciar = document.getElementById("boton-reiniciar");
+  botonReiniciar.addEventListener("click", reiniciarJuego);
 }
 
 function seleccionarPersonajeJugador() {
@@ -19,6 +30,13 @@ function seleccionarPersonajeJugador() {
   let inputAang = document.getElementById("aang");
   let inputToph = document.getElementById("toph");
   let spanPersonajeJugador = document.getElementById("personaje-jugador");
+
+  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque");
+  sectionSeleccionarAtaque.style.display = "block"; // mostramos
+  let sectionSeleccionarPersonaje = document.getElementById(
+    "seleccionar-personaje"
+  );
+  sectionSeleccionarPersonaje.style.display = "none"; // ocultamos
 
   if (inputZuko.checked) {
     spanPersonajeJugador.innerHTML = "Zuko";
@@ -29,7 +47,21 @@ function seleccionarPersonajeJugador() {
   } else if (inputToph.checked) {
     spanPersonajeJugador.innerHTML = "Toph";
   } else {
-    alert("Selecciona un personaje");
+    let mensajeError = document.createElement("p");
+    mensajeError.innerHTML = "Selecciona un personaje";
+    mensajeError.style.color = "red";
+
+    let seccionSeleccionarPersonaje = document.getElementById(
+      "seleccionar-personaje"
+    );
+    seccionSeleccionarPersonaje.appendChild(mensajeError);
+
+    // Eliminar el mensaje luego de 2 segundos
+
+    setTimeout(() => {
+      seccionSeleccionarPersonaje.removeChild(mensajeError);
+      reiniciarJuego();
+    }, 2000);
   }
   seleccinarPersonajeEnemigo();
 }
@@ -85,17 +117,57 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate() {
+  let spanVidasJugador = document.getElementById("vidas-jugador");
+  let spanVidasEnemigo = document.getElementById("vidas-enemigo");
+
   if (ataqueEnemigo == ataqueJugador) {
     crearMensaje("EMPATE");
   } else if (ataqueJugador == "Punio" && ataqueEnemigo == "Barrida") {
     crearMensaje("GANASTE");
+    vidasEnemigo--;
+    spanVidasEnemigo.innerHTML = vidasEnemigo;
   } else if (ataqueJugador == "Patada" && ataqueEnemigo == "Punio") {
     crearMensaje("GANASTE");
+    vidasEnemigo--;
+    spanVidasEnemigo.innerHTML = vidasEnemigo;
   } else if (ataqueJugador == "Barrida" && ataqueEnemigo == "Patada") {
     crearMensaje("GANASTE");
+    vidasEnemigo--;
+    spanVidasEnemigo.innerHTML = vidasEnemigo;
   } else {
     crearMensaje("PERDISTE");
+    vidasJugador--;
+    spanVidasJugador.innerHTML = vidasJugador;
   }
+
+  // Revisar vidas
+  revisarVidas();
+}
+
+function revisarVidas() {
+  if (vidasEnemigo == 0) {
+    crearMensajeFinal("FELICITACIONES!!! HAS GANADO");
+  } else if (vidasJugador == 0) {
+    crearMensajeFinal("QUE PENA :c HAS PERDIDO");
+  }
+}
+
+function crearMensajeFinal(resultado) {
+  let sectionReiniciar = document.getElementById("reiniciar");
+  sectionReiniciar.style.display = "block";
+  let sectionMensaje = document.getElementById("mensajes");
+  let parrafo = document.createElement("p");
+
+  parrafo.innerHTML = resultado;
+
+  sectionMensaje.appendChild(parrafo);
+
+  let botonPunio = document.getElementById("boton-punio");
+  botonPunio.disabled = true;
+  let botonPatada = document.getElementById("boton-patada");
+  botonPatada.disabled = true;
+  let botonBarrida = document.getElementById("boton-barrida");
+  botonBarrida.disabled = true;
 }
 
 function crearMensaje(resultado) {
@@ -111,6 +183,10 @@ function crearMensaje(resultado) {
     resultado;
 
   sectionMensaje.appendChild(parrafo);
+}
+
+function reiniciarJuego() {
+  location.reload();
 }
 
 function aleatorio(min, max) {
