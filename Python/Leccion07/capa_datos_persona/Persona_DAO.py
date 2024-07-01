@@ -75,3 +75,4 @@ if __name__ == '__main__':
     personas = Persona_DAO.seleccionar()
     for persona in personas:
         log.debug(persona)
+#
