@@ -22,3 +22,4 @@ class CursorDelPool:
             log.debug('Commit de la transacción')
         self.cursor.close()
         Conexion.liberarConexion(self._conexion)
+        #
