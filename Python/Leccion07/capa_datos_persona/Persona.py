@@ -55,3 +55,4 @@ if __name__ == '__main__':
     log.debug(persona2)
     persona1 = Persona(id_persona = 1)
     log.debug(persona1)
+#
