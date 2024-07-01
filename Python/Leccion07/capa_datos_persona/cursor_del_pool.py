@@ -23,3 +23,9 @@ class CursorDelPool:
         self.cursor.close()
         Conexion.liberarConexion(self._conexion)
         #
+
+if __name__ == '__main__':
+    with CursorDelPool() as cursor:
+        log.debug('Dentro del bloque with')
+        cursor.execute('SELET * FROM persona')
+        log.debug(cursor.fetchall())
