@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="NATALIA LUCERO" />
+    <meta name="description" content="descripcion sitio web" />
+    <meta name="keywords" content=" tutoriales,html,desarrollo web" />
+    <title>Estructura de la cabecera</title>
+    <link rel="icon" href="img/Icono.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: rgb(240, 208, 159);
+      }
+
+      header {
+        position: relative;
+        margin: 20px auto;
+        width: 1000px;
+        height: 200px;
+        background: rgb(196, 161, 96);
+        border: 5px;
+      }
+
+      #logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 60px;
+        font-family: "Playwrite ES Deco", cursive;
+        font-size: 50px;
+        text-align: center;
+        line-height: 60px;
+      }
+
+      .redes {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        background: #516d1d;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 42px;
+        color: white;
+      }
+
+      #icono1 {
+        top: 42px;
+        right: 120px;
+        background: goldenrod;
+      }
+
+      #icono2 {
+        top: 42px;
+        right: 71px;
+        background: #516d1d;
+      }
+
+      #icono3 {
+        top: 42px;
+        right: 19px;
+        background: orange;
+      }
+
+      nav {
+        position: relative;
+        margin: 6px auto;
+        width: 1080px;
+        height: 48px;
+      }
+
+      .botones {
+        float: left;
+        width: 192px;
+        height: 48px;
+        margin: 2px 4px;
+        list-style: none;
+        background: rgb(91, 70, 11);
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+        text-align: center;
+        line-height: 48px;
+      }
+
+      #top {
+        position: relative;
+        margin: 20px auto;
+        width: 1070px;
+        height: 192px;
+      }
+
+      #top ul {
+        width: 1070px;
+        height: 192px;
+      }
+
+      #top ul li {
+        float: left;
+        width: 327px;
+        height: 192px;
+        margin-right: 5px;
+        list-style: none;
+        text-align: center;
+      }
+
+      #top ul li img {
+        border-radius: 100%;
+        height: 100px;
+      }
+
+      #top ul li h1 {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      #top ul li p {
+        font-size: 14px;
+        margin: 10px;
+      }
+
+      aside#der {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 453px;
+      }
+
+      aside#der h1 {
+        width: 200;
+      }
+
+      article {
+        position: absolute;
+        left: 200px;
+        top: 0;
+        width: 600px;
+        height: 453px;
+        margin: 10px;
+      }
+
+      article h1 {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        margin: 20px;
+      }
+
+      article p {
+        margin: 5px 20px;
+        font-size: 14px;
+        text-align: justify;
+      }
+
+      article p img {
+        float: left;
+        margin-right: 20px;
+      }
+
+      aside#izq {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 453px;
+        background: rgb(127, 116, 95);
+      }
+
+      aside#izq {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 453px;
+      }
+
+      aside#izq ul li {
+        background: rgb(141, 108, 17);
+        padding: 10px;
+        margin: 3px 10px;
+        color: white;
+      }
+
+      aside#izq {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 453px;
+      }
+
+      aside#izq ul li {
+        background: rgb(141, 108, 17);
+        padding: 10px;
+        margin: 3px 10px;
+        color: white;
+      }
+
+      Section {
+        position: relative;
+        margin: auto;
+        width: 1000px;
+        height: 480px;
+        background: orange;
+      }
+
+      footer {
+        position: relative;
+        margin: 20px auto;
+        width: 1080px;
+        height: 70px;
+        background: rgb(91, 70, 11);
+        text-align: center;
+        line-height: 70px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">LOGOTIPO</div>
+
+      <div id="icono1" class="redes">x</div>
+      <div id="icono2" class="redes">x</div>
+      <div id="icono3" class="redes">x</div>
+    </header>
+
+    <nav>
+      <ul>
+        <li class="botones">Botón1</li>
+        <li class="botones">Botón2</li>
+        <li class="botones">Botón3</li>
+        <li class="botones">Botón4</li>
+        <li class="botones">Botón5</li>
+      </ul>
+    </nav>
+
+    <div id="top">
+      <ul>
+        <li>
+          <img src="img/141163.webp" width="100" />
+
+          <h1>Lorem ipsum</h1>
+
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            aliquam maiores ea velit blanditiis porro non at hic, recusandae
+            placeat totam distinctio aperiam commodi quae similique? Deleniti
+            qui temporibus at.
+          </p>
+        </li>
+
+        <li>
+          <img src="img/141163.webp" width="100" />
+
+          <h1>Lorem ipsum</h1>
+
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            aliquam maiores ea velit blanditiis porro non at hic, recusandae
+            placeat totam distinctio aperiam commodi quae similique? Deleniti
+            qui temporibus at.
+          </p>
+        </li>
+
+        <li>
+          <img src="img/141163.webp" width="100" />
+
+          <h1>Lorem ipsum</h1>
+
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            aliquam maiores ea velit blanditiis porro non at hic, recusandae
+            placeat totam distinctio aperiam commodi quae similique? Deleniti
+            qui temporibus at.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <section>
+      <aside id="“izq”">
+        <ul>
+          <li>link 1</li>
+          <li>link 2</li>
+          <li>link 3</li>
+          <li>link 4</li>
+        </ul>
+      </aside>
+      <article>
+        <h1>Lorem ipsum></h1>
+
+        <p>
+          <img src="img/141163.webp" width="250" />Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Error repellendus iure ut sunt
+          consequatur esse doloribus reprehenderit pariatur ipsam quaerat cum,
+          libero culpa. Vel, amet laborum! At cupiditate ducimus labore.
+        </p>
+
+        <br />
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          hendrerit finibus justo, ut consectetur nunc. Etiam malesuada velit at
+          velit bibendum, ac congue mi consequat. Proin non eros condimentum,
+          venenatis mauris a, mollis diam. Integer maximus elementum tempor.
+          Integer commodo mattis ipsum, at rhoncus est congue vel. In molestie
+          tincidunt nisl ultrices ultrices. Fusce aliquam mattis neque et
+          accumsan. Nunc rutrum nisl at dapibus cursus.
+        </p>
+      </article>
+      <aside id="“der”"></aside>
+    </section>
+
+    <footer>&copy;todos los derechos reservados.</footer>
+  </body>
+</html>
